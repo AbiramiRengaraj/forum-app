@@ -1,0 +1,23 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="english">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+</head>
+<body>
+    <h1>Forum application</h1>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <a href="{{ url_for('post', post_id=post['id']) }}">{{ post['title'] }}</a>
+                <!-- Add a link to delete the post -->
+                
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('new_post') }}">New Post</a>
+</body>
+</html>
+>
