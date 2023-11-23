@@ -1,4 +1,4 @@
-# downloaded the flask with the help of pip install flask and then imported flask for building the forum forum_application
+# downloaded the flask with the help of pip install flask and then imported flask for building the forum_application
 
 from flask import Flask, render_template, request, redirect, url_for
 
@@ -46,15 +46,6 @@ def new_comment(post_id):
         post['comments'].append(comment_text)
         return redirect(url_for('post', post_id=post_id))
     return "Post not found", 404
-
-
-
-
-
-
-
-
-
 
 # default port=5000(if we need to run in a specific port means #forum_app.run(port=8080))
 if __name__ == '__main__':
